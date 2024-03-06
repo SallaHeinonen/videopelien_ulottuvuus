@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
+
+        <title>Videopelien ulottuvuus</title>
+    </head>
+
+<body>
+    <nav>
+        <div class="logo" onclick="showPage('etusivu')">
+            <img src="../images/home-solid-24.png" width="100%">
+        </div>
+
+        <ul class="nav-menu">
+
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="toggleSublinks('videopelit')">Videopelivalinta</a>
+                <ul class="sublinks" id="sublinks-videopelit">
+                    <li><a href="#" class="sublink" onclick="showPage('genret')">Genret</a></li>
+                    <li><a href="#" class="sublink" onclick="showPage('alustat')">Alustat</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="showPage('uutiset')">Uutiset</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="showPage('pelivisa')">Pelivisa</a>
+            </li>
+
+        </ul>
+
+        <div class="menuContainer">
+            <div class="menu">
+                <span class="line one"></span>
+                <span class="line two"></span>
+                <span class="line three"></span>
+            </div>
+        </div>
+
+    </nav>
+
+    <header>
+        <h1>Videopelien ulottuvuus</h1>
+    </header>
+
+    <div id="etusivu" class="container">
+        <div class="text-container">
+            <p class="centertext">Tervetuloa Videopelien ulottuvuuteen!</p>
+            <p class="bodytext">Sivustomme tarjoaa nimensä mukaista sisältöä uusille sekä kokeneille käyttäjille. 
+            Meiltä löytyy Videopelin valintaa, Uutiset sekä Pelivisa! Uudet tulokkaat, jotka ovat kiinnostuneet pelaamisesta, 
+            mutta eivät tiedä mistä aloittaisi: Videopelivalintamme kertoo eri laitteista, 
+            peligenreistä sekä niiden vaihtoehdoista. Uutisissa jaamme linkkejä tulevien pelien julkaisuja, 
+            muutoksia ja päivityksiä, arvosteluja, videoita ja kaikkea pelaamiseen liittyiä artikkeleita. 
+            Pelivisassa voit testata omaa tietämystäsi peliaiheista!</p>
+            <p class="centertext">Yhteystietomme: Castelenkatu 76, 0400-9371453, gameuniverse@gmail.com</p>
+
+        </div>
+    </div>
+
+    <div id="alustat" class="container" style="display: none">
+        <div class="text-container">
+            <p class="bodytext">Videopelien pelaamiseen tarvitaan alusta, johon kuuluu käyttöliittymä ja näyttölaite.
+                Se voi olla esimerkiksi tietokone, pelikonsoli, käsikonsoli tai matkapuhelin. Pelin näkee tietokoneen
+                näytöstä, televisiosta tai laitteen omasta näytöstä. Ensimmäiset pelikonsolilaitteet julkaistiin
+                70-luvulla ja ovat kehittyneet sukupolvesta toiseen nykypäivään asti.
+            </p>
+        </div>
+
+        <div class="image-container-column">
+            <img class="image-big" src="../images/gaming_pc.jpg">
+            <img class="image-big" src="../images/gaming_tv_players_640.jpg">
+            <img class="image-big" src="../images/gaming_laptop.png">
+        </div>
+
+        <div class="text-container">
+            <p class="bodytext">
+                Pelin kontrolloimiseen käytetään tietokoneen hiirtä ja näppäimistöä, konsolin ohjainta tai
+                puhelimen kosketusnäyttöä. Tekniikan kehityttyä erilaisia ohjaimia ja alustoja voi 
+                käyttää keskenään. Myös pelaaminen tietokoneilla on parantunut, 
+                kun niiden komponenttiosat ovat kehittyneet tehokkaammiksi.
+            </p>
+        </div>
+
+        <div class="image-container-column">
+            <img class="image-big" src="../images/gaming_pc2.png">
+            <img class="image-big" src="../images/controllers_640.jpg">
+        </div>
+        <div class="text-container">
+            <p class="bodytext">
+                Kuvissa on suosituimpia peli- ja käsikonsoleita eri sukupolvilta, mm. Gameboy-käsikonsoli ja Gameboy Advance.
+                Nintendo Entertainment System (NES) ja Nintendo Gamecube.
+            </p>
+        </div>
+        <div class="image-container-row">
+            <img class="image-small" src="../images/gameboy_640.jpg">
+            <img class="image-small" src="../images/gameboy_advance_640.jpg">
+        </div>
+        <div class="image-container-row">
+            <img class="image-small" src="../images/nes_640.jpg">
+            <img class="image-small" src="../images/gamecube_640.png">
+        </div>
+        <div class="text-container">
+            <p class="bodytext">
+                Nintendo WiiU ja Nintendo 3DS, josta on julkaistu useita eri malleja ja "sisarversioita", kuten
+                Nintendo 3DS, 3DS XL, 3DS LL, New Nintendo 3DS, New Nintendo 3DS XL.
+            </p>
+        </div>
+        <div class="image-container-row">
+            <img class="image-small" src="../images/wii_u_640.jpg">
+            <img class="image-small" src="../images/nintendo_3ds_640.jpg">
+        </div>
+        <div class="text-container">
+            <p class="bodytext">
+                Nykypäivänä tunnetuimmat pelikonsolit: Playstation 1 (PS1), 2, 3, 4, ja Xbox One ja 360.
+            </p>
+        </div>
+        <div class="image-container-row">
+            <img class="image-small" src="../images/ps1_640.jpg">
+            <img class="image-small" src="../images/ps2_640.jpg">
+        </div>
+        <div class="image-container-row">
+            <img class="image-small" src="../images/ps3_640.jpg">
+            <img class="image-small" src="../images/ps4_640.jpg">
+        </div>
+        <div class="image-container-row">
+            <img class="image-small" src="../images/xbox_one_640.jpg">
+            <img class="image-small" src="../images/xbox_360_640.jpg">
+        </div>
+
+    </div>
+
+    <div id="genret" class="container" style="display: none">
+
+        <p class="bodytext">Videopelit luokitellaan eri lajityyppeihin niiden päämäärän, mekaniikan, miljöön ja teeman mukaan. 
+            Nykypäivän pelien sisältö on moninaista ja ne voivat sisältää useampia eri genrejä, 
+            eikä niitä voi välttämättä lajitella vain yhteen vaihtoehtoon. Pelit voivat jakautua myös alustansa mukaan.
+        </p>
+
+        <div class="buttons-common">
+            <button class="button-style" id="seikkailuBtn" onclick="showPage('seikkailu')">Seikkailu</button>
+            <button class="button-style" id="toimintaBtn" onclick="showPage('toiminta')">Toiminta</button>
+            <button class="button-style" id="simulaatioBtn" onclick="showPage('simulaatio')">Simulaatio</button>
+            <button class="button-style" id="roolipelitBtn" onclick="showPage('roolipelit')">Roolipelit</button>
+            <button class="button-style" id="tasohyppelyBtn" onclick="showPage('tasohyppely')">Tasohyppely</button>
+            <button class="button-style" id="kauhuBtn" onclick="showPage('kauhu')">Kauhu</button>
+            <button class="button-style" id="taisteluBtn" onclick="showPage('taistelu')">Taistelu</button>
+            <button class="button-style" id="pulmapelitBtn" onclick="showPage('pulmapelit')">Pulmapelit</button>
+            <button class="button-style" id="ajaminenBtn" onclick="showPage('ajaminen')">Ajaminen</button>
+        </div>
+    </div>
+    
+    <div id="uutiset" class="container" style="display: none">
+        <div class="news-container">
+            <a href="https://www.pelaaja.fi/uutiset/uusi-pokemon-peli-paljastettiin-tallainen-on-pokemon-legends-z-a/?itm_source=parsely-api">
+            Uusi Pokémon-peli paljastettiin - tällainen on Pokémon Legends Z-A</a>
+
+            <iframe width="350" height="196" src="https://www.youtube.com/embed/LLKXN-2XqQQ?si=KDQ9SnT2e3iYLf08" frameborder="0" allowfullscreen></iframe>
+
+            <a href="https://www.pelaaja.fi/uutiset/seuraava-call-of-duty-peli-saapuu-jo-ensi-kuussa/?itm_source=parsely-api">
+                Seuraava Call of Duty-pelit saapuu jo ensi kuussa</a>
+
+            <a href="https://www.pelaaja.fi/uutiset/seuraavasta-assassins-creedista-vuodettiin-tietoja-julkisuuteen-luvassa-isoja-uudistuksia-ja-irtopaita/">
+                Seuraavasta Assassin's Creedistä vuodettiin tietoja julkisuuteen - luvassa isoja uudistuksia ja irtopäitä</a>
+
+            <iframe width="350" height="196" src="https://www.youtube.com/embed/7Bb_QpVUMJQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+    </div>
+
+    <div id="pelivisa" class="container" style="display: none">
+        <p class="centertext">Pelivisassa voit vastata kaikkeen pelaamiseen liittyviin kysymyksiin!</p>
+        <div id="quiz-container">
+            <button class="startBtn" onclick="startQuiz()">Aloita</button>
+
+            <div id="question-container">
+                <p id="question"></p>
+                <ul id="options-list"></ul>
+            </div>
+            
+            <div id="result-container"></div>
+            <button class="resetBtn" onclick="resetQuiz()" style="display: none;">Yritä uudelleen</button>
+        </div>
+    </div>
+
+    <div class="container" id="seikkailu" style="display: none">
+        <div class="text-container">
+            <p class="bodytext">
+            Seikkailupelit ovat videopeligenre, jotka korostavat pelaajan roolia tarinan kertomisessa
+            ja maailman tutkimisessa. Näissä peleissä pelaajat ovat usein vuorovaikutuksessa ympäristön kanssa,
+            ratkaisevat pulmia ja etenevät tarinassa.
+            </p>
+        </div>
+        <div class="image-container-column">
+            <p class="centertext">(Kuva avaa linkin)</p>
+            <a href="https://www.minecraft.net/en-us"><img class="image-big" src="../images/Pienempi kuva.png"></a>
+        </div>
+        
+        <div class="image-container-column">
+            <img class="image-big" src="../images/minecraft.png">
+        </div>
+        <div class="text-container">
+            <p class="bodytext">Minecraft on hiekkalaatikko- ja seikkailupeli, jonka on luonut 
+            pelikehittäjä Markus "Notch" Persson ja kehittänyt Mojang Studios-yritys.
+            Peli julkaistiin ensimmäisen kerran vuonna 2011 ja on sittemmin kasvanut yhdeksi 
+            kaikkien aikojen suosituimmista ja myydyimmistä peleistä.
+            Minecraftin ainutlaatuisuus piilee sen avoimessa maailmassa, luovassa vapaudesta ja 
+            mahdollisuudesta rakentaa lähes mitä tahansa.
+            </p>
+        </div>
+        <div class="image-container-column">
+            <img class="image-big" src="../images/uncharted_4.jpg">
+            <img class="image-big" src="../images/uncharted_4_2.png">
+        </div>
+        <div class="text-container">
+            <p class="bodytext">
+                Uncharted on suosittu toimintaseikkailupelisarja, joka on kehitetty Naughty Dog-peliyhtiön
+                toimesta ja julkaistu ensimmäisen kerran vuonna 2007. 
+                Sarja on tunnettu vahvasta tarinankerronnasta, toiminnasta, seikkailusta 
+                ja graafisesta loistosta. Se seuraa päähenkilö Nathan Drakea, seikkailijaa ja 
+                aarteenmetsästäjää, hänen vaarallisilla matkoillaan ympäri maailmaa.
+            </p>
+        </div>
+    </div>
+
+    <div id="toiminta" class="container" style="display: none">
+        <div class="text-container">
+            <p class="bodytext">Toimintapelit ovat videopeligenre, joka keskittyy pelaajan taitoihin
+                ja nopeisiin reaktioihin. Näissä peleissä pelaajan on yleensä hallittava pelihahmoa 
+                ja käytettävä erilaisia taitoja, kuten ampumista, taistelua tai liikkumista, 
+                voittaakseen viholliset tai suorittaakseen tehtäviä. 
+                Toimintapeleillä voi olla erilaisia alagenrejä ja tyylejä.
+            </p>
+        </div>
+        <div class="image-container-column">
+            <img class="image-big" src="../images/Iso kuva.jpg">
+            <img class="image-big" src="../images/mh4u.avif">
+        </div>
+        <div class="text-container">
+            <p class="bodytext">"Monster Hunter 4 Ultimate" on toimintaroolipeli, joka kehitettiin 
+            ja julkaistiin Capcomin toimesta Nintendo 3DS:lle vuonna 2014. 
+            Peli on osa laajaa Monster Hunter -pelisarjaa, joka on tunnettu suurista hirviöistä, niiden 
+            metsästyksestä, yhteistyöstä ja roolipelimäisistä elementeistä.
+            </p>
+        </div>
+        <div class="image-container-column">
+            <img class="image-big" src="../images/re4_remake.jpeg">
+            <img class="image-big" src="../images/resident evil_pov.png">
+        </div>
+
+        <div class="text-container">
+            <p class="bodytext">"Resident Evil 4" on toimintaseikkailupeli, joka julkaistiin 
+                alun perin Capcomin kehittämänä vuonna 2005. Peli on osa "Resident Evil" -pelisarjaa 
+                ja on saatavana useille eri alustoille, kuten PlayStation 2, GameCube, Xbox ja
+                myöhemmille alustoille kuten PlayStation 3, Xbox 360, sekä PC. Vuonna 2023
+                pelistä julkaistiin uusioversio.
+            </p>
+        </div>
+    </div>
+
+    <div id="simulaatio" class="container" style="display: none;">
+        <div class="text-container">
+            <p class="bodytext">
+                Simulaatiopelit ovat laaja ja monipuolinen peligenre, joka pyrkii jäljittelemään
+                tai simuloimaan erilaisia todellisia tai kuvitteellisia toimintoja. 
+                Nämä pelit tarjoavat pelaajille mahdollisuuden kokea elämää eri näkökulmista
+                ja toimia erilaisissa rooleissa. Simulaatiopelit voivat 
+                kattaa laajan kirjon aiheita ja pelaamistyylejä.
+            </p>
+        </div>
+        <div class="image-container-column">
+            <img class="image-big" src="../images/The_Sims_2.jpg">
+            <img class="image-big" src="../images/The_Sims_3.jpg">
+        </div>
+        <div class="text-container">
+            <p class="bodytext">
+                The Sims on suosittu simulaatiopelisarja, joka keskittyy pelaajien
+                mahdollisuuteen luoda ja hallita virtuaalisia ihmisiä, eli "simejä". 
+                Sarjan on kehittänyt Maxis-pelistudio, ja sen julkaisijana on Electronic Arts. 
+                The Sims -pelit ovat tunnettuja luovuudestaan, rakentamisesta, sosiaalisista 
+                vuorovaikutuksista ja hahmojen elämänsimulaatiosta. Pelistä on julkaistu useampia versioita:
+                The Sims, The Sims 2, The Sims 3, The Sims 4 sekä runsas määrä lisäosia ja kamasettejä.
+            </p>
+        </div>
+        <div class="image-container-column">
+            <img class="image-big" src="../images/stardew_valley.jpg">
+            <img class="image-big" src="../images/stardew_valley2.jpg">
+        </div>
+
+        <div class="text-container">
+            <p class="bodytext">
+                Stardew Valley on indie-roolipeli ja maataloussimulaattori, 
+                jonka on kehittänyt yksinään ConcernedApe (Eric Barone). 
+                Peli julkaistiin alun perin Microsoft Windowsille vuonna 2016 ja 
+                myöhemmin se on julkaistu useille muille alustoille, kuten PlayStation, 
+                Xbox, Nintendo Switch ja mobiililaitteet. 
+                Stardew Valley on saanut suurta suosiota pelaajien keskuudessa sen
+                viehättävän grafiikan, monipuolisten pelimekaniikkojen ja rentouttavan pelikokemuksen ansiosta.
+            </p>
+        </div>
+
+    </div>
+
+    <div id="roolipelit" class="container" style="display: none;">
+        <div class="text-container">
+            <p class="bodytext">Roolipelit (RPG, Role-Playing Games) ovat peligenre, 
+                joka antaa pelaajille mahdollisuuden ottaa rooli tietystä hahmosta
+                tai luoda oman hahmonsa, jonka tarinaa ja kohtaloa he voivat ohjata. 
+                RPG:t ovat monipuolisia ja voivat sisältää useita alagenrejä ja pelityylejä.
+            </p>
+        </div>
+
+        <div class="image-container-column">
+            <img class="image-big" src="../images/witcher3_1.jpg">
+            <img class="image-big" src="../images/witcher3_2.jpg">
+        </div>
+
+        <div class="text-container">
+            <p class="bodytext">The Witcher 3: Wild Hunt on toimintaroolipeli (RPG), 
+                joka on kehitetty ja julkaistu puolalaisen CD Projekt -pelikehitysyrityksen toimesta. 
+                Peli julkaistiin alun perin vuonna 2015 ja on osa "The Witcher" -pelisarjaa, 
+                joka perustuu puolalaisen kirjailijan Andrzej Sapkowskin luomaan kirjasarjaan. 
+                Witcher 3 on saanut runsaasti kiitosta pelimaailmastaan, syvällisestä 
+                tarinastaan ja monipuolisista pelimekaniikoistaan. 
+                Pelaajat ottavat roolin Geralt of Rivierana, ammattimaisena hirviönmetsästäjänä eli witcherina. 
+                Peli sijoittuu suureen ja vaaralliseen fantasiamaiseen maailmaan, 
+                joka tunnetaan nimellä The Continent.
+            </p>
+        </div>
+
+        <div class="image-container-column">
+            <img class="image-big" src="../images/skyrim1.jpg">
+            <img class="image-big" src="../images/skyrim2.avif">
+        </div>
+        <div class="text-container">
+            <p class="bodytext">Skyrim, virallisesti The Elder Scrolls V: Skyrim, on avoimen maailman roolipeli,
+                joka kehitettiin ja julkaistiin Bethesda Game Studiosin toimesta. 
+                Peli julkaistiin alun perin vuonna 2011 useille eri alustoille, 
+                kuten PlayStation, Xbox, PC:lle. Skyrim on osa suosittua 
+                "The Elder Scrolls" -pelisarjaa, ja se on saanut laajaa kiitosta pelaajilta ja kriitikoilta.
+                Skyrim sijoittuu fiktiiviseen maailmaan, joka tunnetaan nimellä Tamriel. 
+                Pelaajat ottavat roolin Dovahkiin-nimisenä hahmona, 
+                joka on lohikäärmeiden tappamiseen kykenevä sankari.
+            </p>
+        </div>
+    </div>
+
+    <div id="tasohyppely" class="container" style="display: none;">
+        <div class="text-container">
+            <p class="bodytext">Tasohyppely on videopeligenre, joka keskittyy 
+            pelaajan ohjaamaan hahmon liikuttamiseen ja hyppelehtimiseen ympäristössä. 
+            Pääpaino on taitavassa liikkumisessa ja esteiden voittamisessa. 
+            Genre voi sisältää erilaisia alagenrejä ja tyyliä, ja se on ollut pelimaailmassa 
+            merkittävä ja suosittu monien vuosikymmenten ajan.
+            </p>
+        </div>
+
+        <div class="image-container-column">
+            <img class="image-big" src="../images/super_mario.avif">
+            <img class="image-big" src="../images/super_mario_3d_world.jpg">
+        </div>
+
+        <div class="text-container">
+            <p class="bodytext">
+                Mario-pelisarja on yksi kaikkien aikojen tunnetuimmista ja vaikutusvaltaisimmista videopelisarjoista
+                Sen kehitti ja julkaisi japanilainen peliyhtiö Nintendo, ja pelien päähenkilö on Mario, 
+                italialainen putkimies ja seikkailija. Mario-pelisarja on monipuolinen ja kattaa useita 
+                peligenrejä, mutta sen tunnetuimmat osat ovat tasohyppelyitä.
+            </p>
+        </div>
+
+        <div class="image-container-column">
+            <img class="image-big" src="../images/ori_and_the_blind_forest.jpg">
+            <img class="image-big" src="../images/ori_and_the_will_of_the_wisps.jpg">
+        </div>
+        <div class="text-container">
+            <p class="bodytext">Ori and the Blind Forest ja sen jatko-osa Ori and the Will of the Wisps ovat
+                tasohyppelypelejä, jotka ovat kehittäneet ja julkaisseet Moon Studios. 
+                Pelisarja on tunnettu kauniista visuaalisesta tyylistään, 
+                koskettavasta tarinastaan ja vaativista tasohyppelyelementeistään.
+                Peli seuraa valon henkeä nimeltä Ori, joka on pudonnut kauas kotoaan ja 
+                löytänyt itsensä mystiseen metsään. Ori ystävystyy valonpuhaltaja Sein 
+                kanssa ja yhdessä heidän on pelastettava metsä tuholta.
+            </p>
+        </div>
+    </div>
+
+    <div id="kauhu" class="container" style="display: none;">
+        <div class="text-container">
+            <p class="bodytext">Kauhupelit ovat videopeligenre, jotka on suunniteltu herättämään 
+                pelaajissa pelkoa, jännitystä ja ahdistusta. 
+                Nämä pelit käyttävät usein pimeitä ja pelottavia ympäristöjä, 
+                äänitehosteita, visuaalisia kauhuelementtejä sekä pelattavuuden mekanismeja,
+                jotka voivat yllättää tai pelottaa pelaajaa. 
+                Kauhupelit voivat vaihdella tunnelmaltaan ja tyyliltään, ja ne 
+                voivat liittyä erilaisiin teemoihin, kuten yliluonnolliset kauhut, 
+                psykologinen kauhu tai zombiapokalypsi.
+            </p>
+        </div>
+
+        <div class="image-container-column">
+            <img class="image-big" src="../images/amnesia.jpg">
+            <img class="image-big" src="../images/amnesia2.png">
+        </div>
+
+        <div class="text-container">
+            <p class="bodytext">Amnesia: The Dark Descent on ensimmäisen persoonan psykologinen kauhupeli, 
+                joka kehitettiin ja julkaistiin Frictional Games -pelikehitysyrityksen toimesta. 
+                Peli julkaistiin alun perin vuonna 2010 ja se on tunnettu intensiivisestä kauhukokemuksestaan 
+                sekä pelin ylläpitämästä tunnelmasta. Peli on osa "Amnesia"-pelisarjaa, ja 
+                se on ollut merkittävä tekijä kauhupelien kehityksessä.
+                Peli sijoittuu 1800-luvun alkupuolen preussilaiseen Brennenburgin linnaan, David-nimiseen 
+                päähenkilöön, joka herää ilman muistiaan linnan kellarikerroksissa. 
+                Pelaajan tehtävänä on selvittää salaisuudet, jotka piilevät linnan pimeimmissä kulmissa.
+            </p>
+        </div>
+
+        <div class="image-container-column">
+            <img class="image-big" src="../images/outlast.jpg">
+            <img class="image-big" src="../images/outlast2.webp">
+        </div>
+        <div class="text-container">
+            <p class="bodytext">Outlast on ensimmäisen persoonan selviytymiskauhupeli, joka 
+                kehitettiin ja julkaistiin Red Barrels -pelikehitysyrityksen toimesta. 
+                Peli julkaistiin alun perin vuonna 2013 ja on tunnettu intensiivisestä ja pelottavasta 
+                tunnelmastaan sekä omaperäisestä pelimekaniikastaan. 
+                "Outlast" on saanut laajaa kiitosta kauhupelien ystäviltä ja 
+                on ollut merkittävä tekijä genressä. Peli sijoittuu Mount Massive -hoitokotiin, 
+                jossa pelaaja ottaa roolin riippumattomana journalistina nimeltä Miles Upshur. 
+                Pelaaja saapuu tutkimaan hoitokotia sen jälkeen, kun saa vihjeitä 
+                epäinhimillisistä kokeista, jotka liittyvät Mount Massiven toimintaan.
+                Tarina keskittyy selviytymiseen, paljastaa laitoksen 
+                synkkiä salaisuuksia ja välttää vaarallisia uhkia.
+            </p>
+        </div>
+    </div>
+
+    <div id="taistelu" class="container" style="display: none;">
+        <div class="text-container">
+            <p class="bodytext">Taistelupelit ovat videopeligenre, jossa pelaajat ohjaavat 
+                yleensä yhtä hahmoa ja taistelevat vastustajia vastaan yksi vastaan yksi -asetelmissa. 
+                Nämä pelit ovat tunnettuja syvällisistä taistelumekaniikoistaan, 
+                taitotasoon perustuvasta pelaamisesta sekä monipuolisista hahmoista ja liikkeistä. 
+                Taistelupelit ovat usein suosittuja kilpapelaamisen parissa, 
+                ja ne voivat olla moninpeli- tai yksinpelikokemuksia.
+            </p>
+        </div>
+
+        <div class="image-container-column">
+            <img class="image-big" src="../images/mortalkombat.webp">
+            <img class="image-big" src="../images/mortalkombat1.webp">
+        </div>
+
+        <div class="text-container">
+            <p class="bodytext">Mortal Kombat on legendaarinen taistelupelisarja, joka tunnetaan 
+                verisistä taisteluistaan, brutaaleista liikkeistään ja monipuolisista hahmoistaan. 
+                Peli kehitettiin alun perin Midway Gamesin toimesta, ja se julkaistiin ensimmäisen 
+                kerran vuonna 1992 arcade-pelinä. Mortal Kombat on saavuttanut suurta suosiota ja 
+                siitä on tullut yksi ikonisimmista taistelupelisarjoista.
+            </p>
+        </div>
+
+        <div class="image-container-column">
+            <img class="image-big" src="../images/tekken.jpg">
+            <img class="image-big" src="../images/tekken2.jpeg">
+        </div>
+        <div class="text-container">
+            <p class="bodytext">Tekken on tunnettu ja pitkäikäinen taistelupelisarja, 
+                joka on kehitetty ja julkaistu japanilaisen Bandai Namco Entertainmentin toimesta. 
+                Ensimmäinen "Tekken" -peli julkaistiin alkuperäisessä PlayStation-konsolissa vuonna 1994, 
+                ja siitä lähtien sarja on kasvanut yhdeksi suosituimmista taistelupelisarjoista maailmassa.
+            </p>
+        </div>
+    </div>
+
+    <div id="pulmapelit" class="container" style="display: none;">
+        <div class="text-container">
+            <p class="bodytext">Pulmapelit ovat videopeligenre, jotka keskittyvät pelaajien 
+                älyllisten taitojen käyttämiseen ongelmien ratkaisemiseksi. 
+                Nämä pelit haastavat pelaajien loogista päättelykykyä, strategista ajattelua 
+                ja usein myös aikaan perustuvaa reagointia. Pulmapelit voivat vaihdella 
+                monipuolisesti yksinkertaisista aivonystyröitä kutkuttavista 
+                tehtävistä monimutkaisiin palapelihaukkoihin.
+            </p>
+        </div>
+
+        <div class="image-container-column">
+            <img class="image-big" src="../images/portal2.jpg">
+            <img class="image-big" src="../images/portal3.webp">
+        </div>
+
+        <div class="text-container">
+            <p class="bodytext">Portal on ensimmäisen persoonan pulma- ja toimintapelisarja, 
+                joka on kehitetty ja julkaistu Valve Corporationin toimesta. 
+                Sarja sai alkunsa "Portal" -pelistä, joka julkaistiin alun perin vuonna 2007 osana 
+                "The Orange Box" -pakkauksen kanssa, ja myöhemmin se laajeni "Portal 2":een, joka 
+                julkaistiin vuonna 2011. Portal-pelisarja tunnetaan innovatiivisista pulmamekaniikoistaan, 
+                huumoristaan ja omaperäisestä tarinankerronnastaan.
+            </p>
+        </div>
+
+        <div class="image-container-column">
+            <img class="image-big" src="../images/tetris1.jpeg">
+            <img class="image-big" src="../images/tetris2.png">
+        </div>
+        <div class="text-container">
+            <p class="bodytext">Tetris on yksi kaikkien aikojen tunnetuimmista ja suosituimmista palapelipeleistä. 
+                Peli on luotu venäläisen kehittäjän Alexey Pajitnovin toimesta ja julkaistiin ensimmäisen kerran 
+                Neuvostoliitossa vuonna 1984. Alkuperäisen version nimi tulee kreikkalaisesta sanasta "tetra", 
+                joka tarkoittaa neljää, mikä viittaa pelin neliönmuotoisiin palikoihin. 
+                Tetris on julkaistu monilla alustoilla ja se on saanut erilaisia versioita ja 
+                muunnelmia vuosien varrella.
+            </p>
+        </div>
+    </div>
+
+    <div id="ajaminen" class="container" style="display: none;">
+        <div class="text-container">
+            <p class="bodytext">Ajamispelit ovat videopeligenre, jotka keskittyvät pelaajien 
+                osallistumiseen erilaisiin ajoneuvopohjaisiin kilpailuihin. 
+                Nämä pelit voivat kattaa laajan valikoiman ajoneuvoja, kuten autoja, moottoripyöriä, 
+                veneitä ja jopa avaruusaluksia. Ajamispelit tarjoavat pelaajille mahdollisuuden 
+                kilpailla muita vastaan tai parantaa aikarajoitettuja tehtäviä.
+            </p>
+        </div>
+
+        <div class="image-container-column">
+            <img class="image-big" src="../images/forza1.jpg">
+            <img class="image-big" src="../images/forza2.webp">
+        </div>
+
+        <div class="text-container">
+            <p class="bodytext">"Forza" on ajosimulaattorisarja, joka on kehitetty ja 
+                julkaistu Microsoftin toimesta. Sarja tunnetaan laadukkaista ja realistisista 
+                ajokokemuksistaan sekä laajasta valikoimasta ajoneuvoja ja kilpailutiloja.
+            </p>
+        </div>
+
+        <div class="image-container-column">
+            <img class="image-big" src="../images/eurotruck1.avif">
+            <img class="image-big" src="../images/eurotruck2.jpg">
+        </div>
+        <div class="text-container">
+            <p class="bodytext">Euro Truck Simulator 2 on ajosimulaattoripeli, joka on kehitetty 
+                ja julkaistu SCS Software -studion toimesta. Peli tarjoaa pelaajille mahdollisuuden 
+                kokea rekkakuskin arjen Euroopan maanteillä. ETS2 on saavuttanut suosiotaan realistisen 
+                ajokokemuksen, yksityiskohtaisen ympäristön ja laajan mukautettavuuden ansiosta.
+            </p>
+        </div>
+    </div>
+
+    
+</body>
+</html>
