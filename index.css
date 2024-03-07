@@ -17,7 +17,7 @@ body {
     body {
         font-size: 1em;
         min-height: 100vh;
-        background-image: url('../images/Tausta.png');
+        background-image: url('./images/Tausta.png');
         background-repeat: no-repeat;
         /* This puts the focus on the center eg. on mobile devices */
         background-position: 60% 0%;
@@ -345,7 +345,7 @@ body {
     body {
         font-size: 1.05em;
         min-height: 100vh;
-        background-image: url('../images/Tausta.png');
+        background-image: url('./images/Tausta.png');
         background-repeat: no-repeat;
         background-position: 60% 0%;
         background-size: cover;
@@ -668,7 +668,7 @@ body {
     body {
         font-size: 1.15em;
         min-height: 100vh;
-        background-image: url('../images/Tausta.png');
+        background-image: url('./images/Tausta.png');
         background-repeat: no-repeat;
         background-position: 60% 0%;
         background-size: cover;
@@ -994,7 +994,7 @@ body {
     body {
         font-size: 1.15em;
         min-height: 100vh;
-        background-image: url('../images/Tausta.png');
+        background-image: url('./images/Tausta.png');
         background-repeat: no-repeat;
         background-position: 60% 0%;
         background-size: cover;
@@ -1318,7 +1318,7 @@ body {
     body {
         font-size: 1.15em;
         min-height: 100vh;
-        background-image: url('../images/Tausta.png');
+        background-image: url('./images/Tausta.png');
         background-repeat: no-repeat;
         background-position: 60% 0%;
         background-size: cover;
